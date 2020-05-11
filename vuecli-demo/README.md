@@ -59,15 +59,14 @@ src  源代码
     assets  静态文件  图片 css ....
     components  组件
         驼峰命名 .vue
-
+main.js    逻辑入口文件
 
 
 问题：无法加载文件 C:\Program Files\nodejs\npm.ps1，因为在此系统上禁止运行脚本。
 
-经查，原因：现用执行策略是 Restricted（默认设置）
+经查，原因：现用执行策略是 Restricted（默认设置）---参考：https://www.cnblogs.com/chenzhiran/p/12080349.html
 
 解决办法：
 1.win+X键，使用管理员身份运行power shell
-<img src="https://img2018.cnblogs.com/i-beta/1696371/201912/1696371-20191222171654974-716476594.png"/>
 2.输入命令：set-executionpolicy remotesigned
 3.输入”Y“,回车，问题解决。
