@@ -70,3 +70,5 @@ main.js    逻辑入口文件
 1.win+X键，使用管理员身份运行power shell
 2.输入命令：set-executionpolicy remotesigned
 3.输入”Y“,回车，问题解决。
+
+注册全局组件  main.js
