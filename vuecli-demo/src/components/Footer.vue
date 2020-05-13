@@ -1,3 +1,4 @@
+<!doctype html>
 <template>
     <div class="footer">
         <h1>{{title111}}  ---  {{title}}</h1>
