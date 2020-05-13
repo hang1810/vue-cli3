@@ -1,15 +1,25 @@
-<!doctype html>
  <template>
-  <div id="app">  </div>
+  <div id="app"> 
+    <FormHelper>
+        <h2 slot="title">这是title</h2>
+        <p  slot="text">这是内容---使用方法   需要接收方使用 "slot"标签接收</p>
+        <p  slot>这是内容2---使用方法   需要接收方使用 "slot"标签接收</p>
+        <p  slot>这是内容3---使用方法   需要接收方使用 "slot"标签接收</p>
+    </FormHelper> 
+ </div>
 </template>
 
 <script>
-
+import FormHelper from "./components/FormHelper.vue"
 export default {
   name: 'App',
-  components: { },
+  components: { 
+    FormHelper
+  },
   data(){
-    return{ }
+    return{
+      title:'<h2>content</h2>'
+     }
   },  
   methods:{ }
 }
