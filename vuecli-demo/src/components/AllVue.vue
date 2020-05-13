@@ -1,4 +1,3 @@
-<!doctype html>
 <template>
     <div class="allVue">
         <h1>HELLO THIS IS ALLVUE.vue</h1>

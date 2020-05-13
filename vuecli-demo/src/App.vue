@@ -1,33 +1,43 @@
  <template>
-  <div id="app"> 
-    <FormHelper>
-        <h2 slot="title">这是title</h2>
-        <p  slot="text">这是内容---使用方法   需要接收方使用 "slot"标签接收</p>
-        <p  slot>这是内容2---使用方法   需要接收方使用 "slot"标签接收</p>
-        <p  slot>这是内容3---使用方法   需要接收方使用 "slot"标签接收</p>
-    </FormHelper> 
- </div>
+  <div id="app">
+    <!-- 数据缓存 -->
+    <keep-alive>
+    <component  :is="Component"></component>
+    </keep-alive>
+    <!-- <formOne></formOne>--> 
+    <!-- <formTwo></formTwo> --> 
+    <button @click="Component = 'formOne'">show form-one</button><br>
+    <button @click="Component = 'formTwo'">shtwOow form-two</button>
+
+
+
+  </div>
 </template>
 
 <script>
-import FormHelper from "./components/FormHelper.vue"
+import FormOne from "./components/FormOne";
+import FormTwo from "./components/FormTwo";
 export default {
-  name: 'App',
-  components: { 
-    FormHelper
+  name: "App",
+  components: {
+    formOne: FormOne,
+    formTwo: FormTwo
   },
-  data(){
-    return{
-      title:'<h2>content</h2>'
-     }
-  },  
-  methods:{ }
-}
+  data() {
+    return {
+      Component:"formTwo"
+    };
+  },
+  methods: {}
+};
 </script>
 
 <style >
- /* css 样式嵌套 */
- h1{
-   color: blue;
- }
+/* css 样式嵌套 */
+h1 {
+  color: blue;
+}
+h2 {
+  background-color: aquamarine;
+}
 </style>
